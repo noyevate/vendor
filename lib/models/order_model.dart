@@ -25,7 +25,7 @@ class OrderModel {
     final String restaurantId;
     final List<double> restaurantCoords;
     final List<double> recipientCoords;
-    final String driverId;
+    final String riderId;
     final int rating;
     final bool restaurantRating;
     final bool riderRating;
@@ -61,7 +61,7 @@ class OrderModel {
         required this.restaurantId,
         required this.restaurantCoords,
         required this.recipientCoords,
-        required this.driverId,
+        required this.riderId,
         required this.rating,
         required this.restaurantRating,
         required this.riderRating, 
@@ -98,7 +98,7 @@ class OrderModel {
         restaurantId: json["restaurantId"]!,
         restaurantCoords: List<double>.from(json["restaurantCoords"].map((x) => x?.toDouble())),
         recipientCoords: List<double>.from(json["recipientCoords"].map((x) => x?.toDouble())),
-        driverId: json["driverId"],
+        riderId: json["riderId"],
         rating: json["rating"],
         restaurantRating: json["restaurantRating"],
         riderRating: json["riderRating"],
@@ -135,7 +135,7 @@ class OrderModel {
         "restaurantId": restaurantId,
         "restaurantCoords": List<dynamic>.from(restaurantCoords.map((x) => x)),
         "recipientCoords": List<dynamic>.from(recipientCoords.map((x) => x)),
-        "driverId": driverId,
+        "riderId": riderId,
         "rating": rating,
         "restaurantRating": restaurantRating,
         "riderRating": riderRating,
